@@ -1,0 +1,32 @@
+<p>manualtwoway works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <input type="text" (keyup)="setFirstName($event)" />
+            <br/>
+            <input type="text" (keyup)="setLastName($event)" />
+            <br/>
+            <input type="text" (keyup)="setImage($event)" />
+            <br/>
+            <input type="range" value="100" (change)="changeImgSize($event)" />
+        </div>
+        <div class="col">
+            <table>
+                <tr>
+                    <td>First name :</td>
+                    <td>{{ firstName }}</td>
+                </tr>
+                <tr>
+                    <td>Last name :</td>
+                    <td>{{ lastName }}</td>
+                </tr>
+                <tr>
+                    <td>Image :</td>
+                    <td>
+                        <img [width]="imageCurrentSize" class="img-fluid" [src]="imagePath"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
